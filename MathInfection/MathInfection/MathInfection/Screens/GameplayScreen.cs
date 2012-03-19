@@ -202,7 +202,7 @@ namespace MathInfection
             }
             else
             {
-                if(isNewGame)
+                if(isNewGame || gameData.LastGameDied)
                 {
                     gameData.CurrentScore = 0;
                     player1CurrentScore = 0;
@@ -214,10 +214,6 @@ namespace MathInfection
                 else
                 {
                     player1CurrentHealth = gameData.CurrentHealth;
-                    if(gameData.LastGameDied)
-                    {
-                        player1CurrentHealth = 1;
-                    }
                     player1CurrentScore = gameData.CurrentScore;
                 }
             }
