@@ -166,7 +166,7 @@ namespace MathInfection
                     Vector2 textPosition = new Vector2(428, 480);
                     spriteBatch.Draw(introTexture[curFrame], introPosition, Color.White);
                     spriteBatch.DrawString(newGameFont, message, textPosition,
-                                                                           Color.Orange);
+                                                                           Color.Yellow);
                     spriteBatch.End();
                 }
             }
