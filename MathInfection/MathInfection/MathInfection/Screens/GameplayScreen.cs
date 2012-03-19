@@ -276,9 +276,9 @@ namespace MathInfection
             if(!playerAlive)
             {
                 noHealthInstance = noHealth.Play();
+                GameUpdate.UpdateGameData(gameData, player1);
                 ScreenManager.AddScreen(new SummaryScreen("You loose", playerAlive),
                                                                  ControllingPlayer);
-                GameUpdate.UpdateGameData(gameData, player1);
                 FileIO.SerializeToXML(gameData);
                 ExitScreen();
                 MediaPlayer.Stop();

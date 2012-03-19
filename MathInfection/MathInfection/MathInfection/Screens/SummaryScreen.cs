@@ -19,12 +19,11 @@ namespace MathInfection
         public SummaryScreen(string message, bool includeUsageText, bool win)
         {
             string result = win ? "Next Level" : "Try Again";
-            if(win)
-            {
-                message += GameUpdate.GetTotalScore();
-                string hs = GameUpdate.GetHighScores(false);
-                message += hs.Length > 0 ? hs : "\n";
-            }
+
+            message += GameUpdate.GetCurrentGameScore();
+            string hs = GameUpdate.GetHighScores(false);
+            message += hs.Length > 0 ? hs : "\n";
+
             string usageText = "\n\n\nA-button, Space, Enter = " + result +
                                "\nB-button, Esc = Back to Main Screen";
 

@@ -292,6 +292,7 @@ namespace MathInfection
                     data.TopScoresDateTime.Add(DateTime.Now);
                 }
             }
+            FileIO.SerializeToXML(data);
         }
 
         public static string GetHighScores(bool fromMainMenu)
@@ -329,7 +330,7 @@ namespace MathInfection
             return highScores;
         }
 
-        public static string GetTotalScore()
+        public static string GetCurrentGameScore()
         {
             GameData data = FileIO.DeserializeFromXML();
             string totalScore = "";
